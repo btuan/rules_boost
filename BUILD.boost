@@ -156,9 +156,7 @@ boost_library(
 
 boost_library(
     name = "adjacency_list",
-    hdrs = [
-        "boost/graph/adjacency_list.hpp",
-    ],
+    hdrs = glob(["boost/graph/**/*.hpp", "boost/pending/*hpp"]),
 )
 
 boost_library(
@@ -656,6 +654,15 @@ boost_library(
         ":rational",
         ":tokenizer",
         ":variant",
+    ],
+)
+
+boost_library(
+    name = "graph_traits",
+    hdrs = [
+        "boost/graph/graph_traits.hpp",
+        "boost/pending/property.hpp",
+        "boost/pending/detail/property.hpp",
     ],
 )
 
