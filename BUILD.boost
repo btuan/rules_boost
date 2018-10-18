@@ -155,6 +155,10 @@ boost_library(
 )
 
 boost_library(
+    name = "adjacency_list",
+)
+
+boost_library(
     name = "algorithm",
     deps = [
         ":function",
