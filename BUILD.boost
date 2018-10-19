@@ -906,6 +906,12 @@ boost_library(
 )
 
 boost_library(
+    name = "mpi",
+    copts = ["-fopenmp"],
+    hdrs = ["boost/archive/detail/archive_serializer_map.hpp"],
+)
+
+boost_library(
     name = "mp11",
     deps = [
         ":config",
